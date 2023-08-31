@@ -1,13 +1,28 @@
 public class Estudiante {
 
-    private String Nombre;
-    private int Edad;
-    private String Correo;
-    private String TipoEstudiante;
-    private int Semestre;
-    private int nota1;
+    private String nombre;
+    private int edad;
+    private String correo;
+    private String tipoEstudiante;
+    private int semestre;
+    private double nota1;
     private double nota2;
     private double nota3;
+
+    public Estudiante(){
+
+    }
+
+    public Estudiante(String nombre, int edad, String correo,String tipoEstudiante, int semestre, double nota1, double nota2, double nota3){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.correo = correo;
+        this.tipoEstudiante = tipoEstudiante;
+        this.semestre = semestre;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+    }
 
     public double getNota1() {
         return nota1;
@@ -34,42 +49,48 @@ public class Estudiante {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        nombre = nombre;
     }
 
     public int getEdad() {
-        return Edad;
+        return edad;
     }
 
     public void setEdad(int edad) {
-        Edad = edad;
+        edad = edad;
     }
 
     public String getCorreo() {
-        return Correo;
+        return correo;
     }
 
     public void setCorreo(String correo) {
-        Correo = correo;
+        correo = correo;
     }
 
     public String getTipoEstudiante() {
-        return TipoEstudiante;
+        return tipoEstudiante;
     }
 
     public void setTipoEstudiante(String tipoEstudiante) {
-        TipoEstudiante = tipoEstudiante;
+        tipoEstudiante = tipoEstudiante;
     }
 
     public int getSemestre() {
-        return Semestre;
+        return semestre;
     }
 
     public void setSemestre(int semestre) {
-        Semestre = semestre;
+        semestre = semestre;
+    }
+    public double calcularDefinitiva(double nota1, double nota2, double nota3) {
+        double promedio = 0;
+        promedio = (nota1 + nota2 + nota3) / 3;
+        return promedio;
+
     }
 }
