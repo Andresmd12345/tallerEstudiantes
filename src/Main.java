@@ -38,6 +38,19 @@ public class Main {
                 "Carlos@gmail.com"
 
         );
+        Curso curso = new Curso(
+                "",
+                2,
+                3,
+                4,
+                "diurna"
+        );
+
+        curso.setEstudiante1(estudiante1);
+        curso.setEstudiante2(estudiante2);
+        curso.setEstudiante3(estudiante3);
+        curso.setDocente(docente);
+
 
 
         double promedioEstudiante1 = estudiante.calcularDefinitiva(estudiante2.getNota1(),
