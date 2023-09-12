@@ -54,7 +54,7 @@ public class Docente {
         return promedioNota1;
 
     }
-    public double calculaNotaMAyor(double[] notas) {
+    public double calcularNotaMayor(double[] notas) {
         double notaMayor = 0;
         for (int i = 1; i < notas.length; i++) {
             if (notas[i] > notaMayor) {
@@ -130,7 +130,7 @@ public class Docente {
                 estudiante.getNota1(), estudiante.getNota2(), estudiante.getNota3()
         };
         double notaMayor=0;
-        notaMayor=calculaNotaMAyor(notas);
+        notaMayor=calcularNotaMayor(notas);
         return "el estudiante "+estudiante.getNombre()+" su nota es de: "+notaMayor;
     }
 }

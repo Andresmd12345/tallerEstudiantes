@@ -8,12 +8,13 @@ public class Estudiante {
     private double nota1;
     private double nota2;
     private double nota3;
+    private double promedio;
 
-    public Estudiante(){
+    public Estudiante() {
 
     }
 
-    public Estudiante(String nombre, int edad, String correo,String tipoEstudiante, int semestre, double nota1, double nota2, double nota3){
+    public Estudiante(String nombre, int edad, String correo, String tipoEstudiante, int semestre, double nota1, double nota2, double nota3,double promedio) {
         this.nombre = nombre;
         this.edad = edad;
         this.correo = correo;
@@ -22,6 +23,7 @@ public class Estudiante {
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.nota3 = nota3;
+        this.promedio = promedio;
     }
 
     public double getNota1() {
@@ -87,10 +89,34 @@ public class Estudiante {
     public void setSemestre(int semestre) {
         semestre = semestre;
     }
+
+    public double getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
+
     public double calcularDefinitiva(double nota1, double nota2, double nota3) {
-        double promedio = 0;
-        promedio = (nota1 + nota2 + nota3) / 3;
+
+        promedio = (getNota1() + getNota2() + getNota3()) / 3;
         return promedio;
 
+
+    }
+
+
+    public String obtenerInformacion() {
+        return "Estudiante{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", correo='" + correo + '\'' +
+                ", tipoEstudiante='" + tipoEstudiante + '\'' +
+                ", semestre=" + semestre +
+                ", nota1=" + nota1 +
+                ", nota2=" + nota2 +
+                ", nota3=" + nota3 +
+                '}';
     }
 }
